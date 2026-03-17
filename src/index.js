@@ -19,14 +19,11 @@ const products = [
     },
 ]
 
-// products.forEach((item) => {
-//     console.log(item.id)
-// })
 
-const card = document.querySelector('.cards')
+const card = document.querySelector('.card')
 
 products.forEach((item) => {
-    cards.insertAdjacentHTML('beforeend', `
+    card.insertAdjacentHTML('beforeend', `
          Название: ${item.title}
         
         `)
