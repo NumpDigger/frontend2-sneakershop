@@ -15,7 +15,7 @@ services:
     ports:
       - "3000:3000" # или порт твоего backend
     environment:
-      MONGO_URI: "mongodb://mongo:27017/todos"
+      MONGO_URI: "mongodb://mongo:27017/sneakershop"
     depends_on:
       - mongo
 

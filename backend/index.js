@@ -8,8 +8,12 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
 const connectWithRetry = () => {
-  mongoose.connect(process.env.MONGO_URI) // <-- здесь MONGO_URI
+  mongoose.connect('mongodb://mongo_container_LeGoat:27017/sneakershop') // <-- здесь MONGO_URI
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => {
       console.error("MongoDB connection error:", err);
