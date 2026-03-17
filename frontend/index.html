@@ -71,12 +71,15 @@
     <section class="products">
             <div class="flex items-center justify-between mb-10">
                 <h2 class="text-2xl font-bold">All Sneakers</h2>
+                <button onclick="addSneaker()" style="padding: 10px; background: #82f01a; border-radius: 8px; margin: 20px; cursor: pointer;">
+                    + Add sneakers (CRUD)
+                </button>
                 <div class="search flex items-center gap-2 border-1 border-gray-400 py-2 px-3 rounded-xl">
                     <img src="assets/icons/search-icon.svg" alt="search icon">
                     <input placeholder="Поиск..." type="text" class="outline-none">
                 </div>
             </div>
-            <div class="cards flex justify-center flex-wrap gap-10">
+            <div class="cards flex justify-center flex-wrap gap-10" id="sneakers-list">
                 <div class="card border-1 border-gray-200 p-5 flex flex-col w-70 rounded-2xl gap-4">
                     <img class="absolute" src="assets/icons/favourite-active.svg" alt="">
                     <img class="w-70" src="assets/products/sneaker 1.jpg" alt="sneaker">
@@ -175,5 +178,6 @@
                 </div>
             </div>
         </section>
+    <script src="src/index.js"></script>
 </body>
 </html>
