@@ -9,8 +9,10 @@ services:
     volumes:
       - mongo_data:/data/db
 
-  backend:
-    build: .
+  backend: 
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: backend_container_LeGoat
     ports:
       - "3000:3000" # или порт твоего backend
